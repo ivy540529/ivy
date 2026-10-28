@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>瑼?銝? - 撠云??&amp; 撠?鈭????瑟閮?/title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Noto+Serif+TC:wght@500;700&amp;family=Zen+Maru+Gothic:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav>
+<div class="brand"><a href="index.html" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:6px;">? 撠云??&amp; 撠?鈭?/a></div>
+<div class="links">
+<a href="index.html" class="">擐?</a>
+<a href="about.html" class="">銝餉?隞晶</a>
+<a href="gallery.html" class="">??貊倏</a>
+<a href="download.html" class="active">瑼?銝?</a>
+</div>
+<a href="download.html" class="nav-download-btn mobile-only">? 瑼?銝?</a>
+</nav>
+<header class="page-banner">
+  <span class="tag">DOWNLOAD CENTER</span>
+  <h1>? 瑼????潭銝?撠?</h1>
+  <p>??隤脣?雿平鞈???銵?隞嗉??Ｗ?閬?訾??萎?頛?蝺??汗??/p>
+</header>
+<section class="download-section">
+  <!-- Card 1: C40D Specification -->
+  <div class="dl-card">
+    <div class="dl-card-header">
+      <div class="dl-card-icon">??</div>
+      <div class="dl-card-title">
+        <h3>(Yongtek) DBEF C40D 閬??/h3>
+        <span class="badge">PDF ?辣 繚 143 KB</span>
+      </div>
+    </div>
+    <p style="color:#816e68;line-height:1.8;margin:0 0 16px;">
+      <strong>Multilayer Optical Film [ Model: C40D ]</strong><br/>
+      擃?摨血?鈭桀???摮貉?嚗蜓閬?潭???頛???憿舐內?其漁摨西?????嗅??賬?    </p>
+    <table class="dl-info-table">
+      <tr>
+        <td class="label">?Ｗ???</td>
+        <td>C40D (Multilayer Optical Film)</td>
+      </tr>
+      <tr>
+        <td class="label">??閬</td>
+        <td>380um +/- 40um</td>
+      </tr>
+      <tr>
+        <td class="label">?飛?寞?/td>
+        <td>Gain of brightness ??.6, Transmittance: 45簣5%, Haze: 75簣10%</td>
+      </tr>
+      <tr>
+        <td class="label">???皜祈岫</td>
+        <td>95簞C ? (1000 hrs) / 65簞C 93%RH ?? (1000 hrs) ??</td>
+      </tr>
+    </table>
+    <div class="dl-actions">
+      <a href="Yongtek_DBEF_C40D.pdf" download="(Yongtek) DBEF C40D.pdf" class="dl-btn dl-btn-primary">
+        <span>? 蝡銝? PDF 瑼?</span>
+      </a>
+      <a href="Yongtek_DBEF_C40D.pdf" target="_blank" class="dl-btn dl-btn-secondary">
+        <span>??儭??函汗?其葉?湔???汗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Card 2: Presentation & Assignment -->
+  <div class="dl-card">
+    <div class="dl-card-header">
+      <div class="dl-card-icon" style="background:linear-gradient(135deg,#5bbbe3,#429fc8);">??</div>
+      <div class="dl-card-title">
+        <h3>M2-2 蝪∪??璆剛???/h3>
+        <span class="badge">隤脣?雿平 繚 ??啁?</span>
+      </div>
+    </div>
+    <p style="color:#816e68;line-height:1.8;margin:0 0 16px;">
+      ? M2-2 隤脩?摮貊?蝪∪???牧????唳?獢??喉????郊?澆??冽迨銝?撠???    </p>
+    <div class="dl-actions">
+      <a href="index.html" class="dl-btn dl-btn-secondary">
+        <span>?? 餈?擐?</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer>© 2026 小太陽 &amp; 小月亮 的成長日記 · Made with 💛</footer>
+<script>
+(function(){
+  const btn = document.getElementById('shareBtn');
+  const toast = document.getElementById('shareToast');
+
+  function showToast(message){
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(window.__shareToastTimer);
+    window.__shareToastTimer = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 1800);
+  }
+
+  btn.addEventListener('click', async () => {
+    const shareData = {
+      title: '小太陽 & 小月亮 的成長日記',
+      text: '一起看看小太陽 & 小月亮的成長日記 ♡',
+      url: window.location.href
+    };
+
+    try{
+      if(navigator.share){
+        await navigator.share(shareData);
+      }else if(navigator.clipboard){
+        await navigator.clipboard.writeText(window.location.href);
+        showToast('連結已複製');
+      }else{
+        const input = document.createElement('input');
+        input.value = window.location.href;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        input.remove();
+        showToast('連結已複製');
+      }
+    }catch(err){
+      if(err && err.name !== 'AbortError'){
+        showToast('可複製網址後分享');
+      }
+    }
+  });
+})();
+</script>
+<script>
+(function(){
+  const likeBtn = document.getElementById('likeBtn');
+  const likeCount = document.getElementById('likeCount');
+  const commentBtn = document.getElementById('commentBtn');
+  const panel = document.getElementById('commentPanel');
+  const input = document.getElementById('commentInput');
+  const cancelBtn = document.getElementById('cancelComment');
+  const submitBtn = document.getElementById('submitComment');
+  const list = document.getElementById('commentsList');
+
+  let liked = localStorage.getItem('kidsSiteLiked') === '1';
+  let count = Number(localStorage.getItem('kidsSiteLikeCount') || 0);
+  let comments = [];
+  try{
+    comments = JSON.parse(localStorage.getItem('kidsSiteComments') || '[]');
+  }catch(e){ comments = []; }
+
+  function renderLike(){
+    likeCount.textContent = count;
+    likeBtn.classList.toggle('liked', liked);
+    const icon = likeBtn.querySelector('span:first-child');
+    if(icon) icon.textContent = liked ? '♥' : '♡';
+  }
+
+  function renderComments(){
+    list.innerHTML = '';
+    comments.slice().reverse().forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'comment-item';
+
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      meta.textContent = item.time;
+
+      const text = document.createElement('div');
+      text.className = 'text';
+      text.textContent = item.text;
+
+      card.appendChild(meta);
+      card.appendChild(text);
+      list.appendChild(card);
+    });
+  }
+
+  likeBtn.addEventListener('click', () => {
+    liked = !liked;
+    count = Math.max(0, count + (liked ? 1 : -1));
+    localStorage.setItem('kidsSiteLiked', liked ? '1' : '0');
+    localStorage.setItem('kidsSiteLikeCount', String(count));
+    renderLike();
+  });
+
+  function openPanel(){
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden','false');
+    renderComments();
+    setTimeout(() => input.focus(), 100);
+  }
+  function closePanel(){
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden','true');
+  }
+
+  commentBtn.addEventListener('click', openPanel);
+  cancelBtn.addEventListener('click', closePanel);
+  panel.addEventListener('click', e => {
+    if(e.target === panel) closePanel();
+  });
+
+  submitBtn.addEventListener('click', () => {
+    const text = input.value.trim();
+    if(!text) return;
+    comments.push({
+      text,
+      time:new Date().toLocaleString('zh-TW', {
+        year:'numeric', month:'2-digit', day:'2-digit',
+        hour:'2-digit', minute:'2-digit'
+      })
+    });
+    localStorage.setItem('kidsSiteComments', JSON.stringify(comments));
+    input.value = '';
+    renderComments();
+  });
+
+  renderLike();
+})();
+</script>
+</body>
+</html>
+<!-- M2-2²�� -->
