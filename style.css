@@ -1,4 +1,4 @@
-:root{
+﻿:root{
   --pink:#ff9fba;
   --pink-deep:#ff6f91;
   --blue:#9edcf3;
@@ -24,10 +24,10 @@ nav .links a:hover{color:var(--pink-deep)}
 .nav-download-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#ff7d9e,#ffb15f);color:#fff!important;padding:7px 16px;border-radius:999px;font-size:13.5px!important;font-weight:700!important;text-decoration:none;box-shadow:0 4px 14px rgba(255,125,158,.35);transition:transform .2s ease,box-shadow .2s ease;margin-left:14px}
 .nav-download-btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(255,125,158,.5);color:#fff!important}
 .nav-download-btn.mobile-only{display:none}
-.hero-download-wrap{margin:18px auto 26px;display:flex;justify-content:center}
-.hero-download-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#5bbbe3,#429fc8);color:#fff!important;padding:12px 26px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 8px 22px rgba(91,187,227,.35);transition:transform .2s ease,box-shadow .2s ease}
-.hero-download-btn:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 12px 28px rgba(91,187,227,.45);color:#fff!important}
-@media(max-width:900px){.nav-download-btn.mobile-only{display:inline-flex;padding:6px 12px;font-size:12px!important;margin-left:auto}.hero-download-btn{font-size:13.5px;padding:10px 18px}}
+
+
+
+@media(max-width:900px){.nav-download-btn.mobile-only{display:inline-flex;padding:6px 12px;font-size:12px!important;margin-left:auto}}
 
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:100px 20px 60px}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#fff0f3,#eaf6fb 60%,#fff8e8)}
